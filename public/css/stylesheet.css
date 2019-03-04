@@ -1,0 +1,16 @@
+body {
+  background-color: #f8c291;
+}
+
+h1 {
+  color: red;
+}
+
+.form-control {
+  width: 75%;
+  display: inline;
+}
+
+.btn {
+  margin-bottom: 4px;
+}
