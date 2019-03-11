@@ -3,14 +3,32 @@ body {
 }
 
 h1 {
-  color: red;
+  color: white;
 }
 
 .form-control {
-  width: 75%;
+  width: auto;
   display: inline;
 }
 
 .btn {
   margin-bottom: 4px;
+  margin-left: 10px;
+}
+
+.img-fluid {
+  height: 50vh;
+}
+
+.title {
+  text-align: center;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 30px;
+}
+
+.time,
+.current-weather,
+.weather-desc {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 20px;
 }

@@ -1,0 +1,29 @@
+html
+    head
+        title= title
+        link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous")
+        link(rel="stylesheet", href="/css/stylesheet.css")
+        link(href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet")
+    body
+        .container
+            .row.d-flex.justify-content-center
+                h1 Local Weather
+        .container.mt-3
+            .row
+                .col.mx-auto.d-flex.col-lg-6.col-md-10
+                    input.form-control.flex-grow-1
+                    button.btn.btn-light Search
+            .row.mt-2
+                .col.mx-auto.col-lg-6.col-md-10
+                    .card
+                        img.img-fluid(src="/img/test.jpg", alt="")
+                        .card-body
+                            .card-title.title Weather Forecast for #{city}
+                            .card-text.d-flex.justify-content-around
+                                .time
+                                    p 10:15pm
+                                .current-weather
+                                    p #{temperature}
+                                .weather-desc
+                                    p #{weatherDesc}
+                            a.btn.btn-primary Tweet Weather
