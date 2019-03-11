@@ -16,6 +16,9 @@ app.get('/', (req, res) => {
 
   rp(options).then(data => {
     const weather = JSON.parse(data);
+    // Convert Temp from cels
+    // Change background img
+    // get current time
     res.render('test', {
       temperature: weather.main.temp,
       city: weather.name,
