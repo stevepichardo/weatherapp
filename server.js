@@ -1,4 +1,5 @@
 const express = require('express');
+const helper = require('./public/js/helpers');
 const app = express();
 const rp = require('request-promise');
 
@@ -9,20 +10,22 @@ app.get('/', (req, res) => {
   var options = {
     uri: 'https://api.openweathermap.org/data/2.5/weather',
     qs: {
-      q: 'new york',
+      q: 'lakeland',
       APPID: '15aa7326e54d887f0365f62a4ef96a3a'
     }
   };
 
   rp(options).then(data => {
     const weather = JSON.parse(data);
-    // Convert Temp from cels
+    const fahrenheit = helper.conversionFahrenheit(weather.main.temp);
+    const now = helper.getCurrentTime();
+
     // Change background img
-    // get current time
     res.render('test', {
-      temperature: weather.main.temp,
+      temperature: fahrenheit,
       city: weather.name,
-      weatherDesc: weather.weather[0].description
+      weatherDesc: weather.weather[0].description,
+      time: now
     });
   });
 });
